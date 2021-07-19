@@ -1,0 +1,274 @@
+
+body{
+  background: #efefef;
+}
+.fb-bg-black{
+  background: #ffffff;
+}
+
+/* header */
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navigation{
+  height: 10vh;
+}
+.navigation .menu-options a{
+  color: #fff;
+}
+.navigation .menu-options a.active{
+  color: #020202;
+}
+.navigation .menu-options i{
+  font-size: 26px;
+}
+.user-icon img{
+  height: 40px;
+}
+.online{
+  position: relative;
+}
+.online::after{
+  content: '';
+  width: 10px;
+  height: 10px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: green;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* main */
+#main-side{
+  display: grid;
+  grid-template-columns: 25% 47% 25%;
+  justify-content: space-between;
+  z-index: 1;
+
+}
+@media only screen and (max-width:991px){
+  #main-side{
+    grid-template-columns: auto;
+    justify-content: space-between;  
+  }
+}
+.sidebar{
+  /* background: #000; */
+  height: 90vh;
+  color: #fff;
+  overflow-y: scroll;
+}
+.sidebar::-webkit-scrollbar{
+  width: 5px;
+  background: transparent;
+}
+.sidebar::-webkit-scrollbar-thumb{
+  width: 5px;
+  background: #6a26b8;
+  border-radius: 8px;
+}
+#left-sidebar{
+  position: sticky;
+  top: 10vh;
+}
+#left-sidebar a{
+  color: #222;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 400ms;
+  padding: 10px;
+}
+#left-sidebar a:hover{
+  color: darkblue;
+  background: #00000042;
+}
+#left-sidebar i{
+  font-size: 22px;
+}
+.side-menu-list img{
+  width: 25px;
+}
+.shortcuts img{
+  width: 45px;
+  margin-right: 10px;
+}
+
+#right-sidebar{
+  position: sticky;
+  top: 10vh;
+}
+.sponsored a{
+ padding: 10px;
+ transition: all 400ms;
+}
+.sponsored a:hover{
+  background: #00000025;
+}
+.sponsored a{
+  text-decoration: none;
+  color: #111;
+}
+.sponsored img{
+  width: 35%;
+  height: 90px;
+  margin-right: 10px;
+}
+.contact-list i{
+  font-size: 20px;
+  cursor: pointer;
+}
+.contact-list a{
+  color: #111;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 8px 5px;
+  transition: all 400ms;
+  border-radius: 8px;
+  position: relative;
+}
+.contact-list a:hover{
+  background: #00000034;
+}
+.contact-list img{
+  width: 40px;
+  position: relative;
+}
+.contact-list .active{
+  position: relative;
+}
+.contact-list .story img{
+  border: 3px solid #0c6be7;
+  border-radius: 50%;
+}
+.contact-list .story.viewed img{
+  border: 3px solid #bccfe7;
+  border-radius: 50%;
+}
+.contact-list .active::after{
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: green;
+  bottom: 0%;
+  right: 0%;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+
+/* main content area */
+#main-contents .mini-header .nav-link:hover{
+  background: #0000001c;
+}
+#main-contents .mini-header .bx-slider-alt{
+  background: #0000001c;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.single-story{
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.single-story.me .footer{
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  padding: 20px 10px;
+  bottom: 0;
+
+}
+.single-story.me .footer .bx{
+  position: absolute;
+  font-size: 25px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #0d44f8;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+.single-story.me{
+  transition: all 400ms;
+}
+.single-story.me:hover{
+  opacity: .8;
+}
+.single-story .story-img{
+  height: 200px;
+}
+.single-story .story-profile{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border: 2px solid blue;
+  border-radius: 50%;
+}
+
+.add-file-post a{
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  text-decoration: none;
+}
+.add-file-post img{
+  height: 25px;
+  margin-right: 10px;
+}
+
+article.single-post button{
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+}
+.single-post .count-like-comment a{
+  text-decoration: none;
+  color: #333;
+}
+.single-post .count-like-comment a:last-child:hover{
+  text-decoration: underline;
+  text-decoration-color: grey;
+}
+.single-post .count-like-comment .bx{
+  text-decoration: none;
+  color: #333;
+  font-size: 23px;
+}
+
+.like-comment-share span{
+  transition: all 400ms;
+  width: 33%;
+  text-align: center;
+}
+
+.like-comment-share span:hover{
+  cursor: pointer;
+  background: #00000011;
+}
+#write-message{
+  /* max-height: 180px; */
+  height: 40px;
+}
+#write-message::-webkit-scrollbar{
+  display: none;
+}
+#write-message + i{
+  bottom: 25px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
